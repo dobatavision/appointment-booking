@@ -46,8 +46,11 @@ class AppointmentController extends Controller
 
         $appointment = Appointment::create($request->all());
 
-        return redirect()->route('appointments.index')
-            ->with('success', 'You have successfully booked the appointment! The client will be notified via ' . $appointment->notification_method . '.');
+        return response()->json([
+            'success' => true,
+            'message' => 'You have successfully booked the appointment! The client will be notified via ' . $appointment->notification_method . '.',
+            'appointment' => $appointment
+        ]);
     }
 
     public function show(Appointment $appointment)

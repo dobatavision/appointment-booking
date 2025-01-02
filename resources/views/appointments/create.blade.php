@@ -11,7 +11,7 @@
             </ul>
         </div>
     @endif
-    <form method="POST" action="{{ route('appointments.store') }}">
+    <form  id="appointmentForm" method="POST" action="{{ route('appointments.store') }}">
         @csrf
         <div class="form-group">
             <label for="client_id">Client</label>
@@ -43,5 +43,28 @@
         document.getElementById('appointment_time').addEventListener('focus', function() {
             this.showPicker();
         });
+
+        $(document).ready(function() {
+        $('#appointmentForm').on('submit', function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: "{{ route('appointments.store') }}",
+                method: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        toastr.success(response.message);
+                        // Optionally, you can reset the form or update the UI
+                        $('#appointmentForm')[0].reset();
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error booking appointment:', error);
+                    toastr.error('An error occurred while booking the appointment.');
+                }
+            });
+        });
+    });
     </script>
 @endsection

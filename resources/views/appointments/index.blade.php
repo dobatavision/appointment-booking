@@ -29,13 +29,15 @@
                     <td>{{ $appointment->notification_method }}</td>
                     <td>{{ $appointment->description }}</td>
                     <td>
-                        <a href="{{ route('appointments.show', $appointment) }}" class="btn btn-info">View</a>
-                        <a href="{{ route('appointments.edit', $appointment) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('appointments.destroy', $appointment) }}" method="POST" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
+                        <div class="btn-group" role="group" aria-label="Actions">
+                            <a href="{{ route('appointments.show', $appointment) }}" class="btn btn-info mr-2 rounded">View</a>
+                            <a href="{{ route('appointments.edit', $appointment) }}" class="btn btn-warning mr-2 rounded">Edit</a>
+                            <form action="{{ route('appointments.destroy', $appointment) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger rounded">Delete</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
             @endforeach
