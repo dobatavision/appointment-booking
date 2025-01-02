@@ -11,13 +11,6 @@ Before you begin, ensure you have the following installed on your system:
 - MySQL
 - Git
 
-README.md
-
-```markdown
-# Laravel Appointment Booking System
-
-This is a Laravel-based appointment booking system. Follow the instructions below to set up and start the project on a freshly installed Ubuntu 24.04 PC.
-
 ## Installation
 
 ### Step 1: Update and Upgrade the System
