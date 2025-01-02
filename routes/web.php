@@ -10,6 +10,5 @@ Route::get('appointments/future', [AppointmentController::class, 'future'])->nam
 
 Route::resource('clients', ClientController::class);
 Route::resource('appointments', AppointmentController::class);
-// Route::resource('notes', NoteController::class);
 
 
