@@ -133,7 +133,7 @@ Visit `http://localhost:8000` in your browser to see the application.
   curl -X POST http://localhost:8000/api/appointments \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
-  -d '{"client_id": 1, "appointment_time": "2023-12-31T13:00:00", "notification_method": "Email"}'
+  -d '{"client_id": 1, "appointment_time": "2025-02-12T13:00:00", "notification_method": "Email"}'
 ```
 ## Additional Commands
 
