@@ -11,39 +11,12 @@ Before you begin, ensure you have the following installed on your system:
 - MySQL
 - Git
 
-## Installation
-
-### Step 1: Update and Upgrade the System
-
-```bash
-sudo apt update
-sudo apt upgrade
-
-Sure! Below is a sample 
-
 README.md
-
- file with instructions on how to set up and start a Laravel project on a freshly installed Ubuntu 24.04 PC with PHP, MySQL, and Laravel.
-
-### 
-
-README.md
-
-
 
 ```markdown
 # Laravel Appointment Booking System
 
 This is a Laravel-based appointment booking system. Follow the instructions below to set up and start the project on a freshly installed Ubuntu 24.04 PC.
-
-## Prerequisites
-
-Before you begin, ensure you have the following installed on your system:
-
-- PHP 8.0 or higher
-- Composer
-- MySQL
-- Git
 
 ## Installation
 
@@ -72,13 +45,8 @@ sudo apt install composer
 sudo apt install mysql-server
 ```
 
-### Step 5: Secure MySQL Installation
 
-```bash
-sudo mysql_secure_installation
-```
-
-### Step 6: Create a MySQL Database and User
+### Step 5: Create a MySQL Database and User
 
 ```bash
 sudo mysql -u root -p
@@ -94,20 +62,20 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-### Step 7: Clone the Repository
+### Step 6: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/dobatavision/appointment-booking.git
+cd appointment-booking
 ```
 
-### Step 8: Install Dependencies
+### Step 7: Install Dependencies
 
 ```bash
 composer install
 ```
 
-### Step 9: Set Up Environment Variables
+### Step 8: Set Up Environment Variables
 
 Copy the `.env.example` file to `.env`:
 
@@ -130,19 +98,19 @@ DB_USERNAME=appointment_user
 DB_PASSWORD=your_password
 ```
 
-### Step 10: Generate Application Key
+### Step 9: Generate Application Key
 
 ```bash
 php artisan key:generate
 ```
 
-### Step 11: Run Migrations and Seeders
+### Step 10: Run Migrations and Seeders
 
 ```bash
 php artisan migrate --seed
 ```
 
-### Step 12: Serve the Application
+### Step 11: Serve the Application
 
 ```bash
 php artisan serve
