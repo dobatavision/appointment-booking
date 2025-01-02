@@ -112,6 +112,33 @@ php artisan serve
 
 Visit `http://localhost:8000` in your browser to see the application.
 
+
+### API: Test queries
+##List Clients
+```bash
+   curl -X GET http://localhost:8000/api/clients \
+  -H "Accept: application/json"
+  ```
+
+##Create a Client
+```bash
+  curl -X POST http://localhost:8000/api/clients \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{"name": "John", "egn": "1234567890"}'
+```
+##List Appointments
+```bash
+  curl -X GET http://localhost:8000/api/appointments \
+  -H "Accept: application/json"
+```
+##Create an Appointment
+```bash
+  curl -X POST http://localhost:8000/api/appointments \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{"client_id": 1, "appointment_time": "2023-12-31T13:00:00", "notification_method": "Email"}'
+```
 ## Additional Commands
 
 ### Clear Cache
