@@ -74,11 +74,7 @@ composer install
 Copy the `.env.example` file to `.env`:
 
 ```bash
-cp 
-
-.env.example
-
- .env
+cp  .env.example .env
 ```
 
 Update the `.env` file with your database credentials:
